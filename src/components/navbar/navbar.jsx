@@ -1,4 +1,4 @@
-import './navbar.css';
+import './navbar.scss';
 import cronoLogo from '../../assets/crono-black-logo.png';
 
 // navbar component
@@ -8,6 +8,7 @@ const NavBar = () => {
     <div className={className}>
       <Logo />
       <Nav />
+      <ThemeToggle />
     </div>
   );
 }
@@ -38,7 +39,7 @@ const Nav = () => {
 }
 const ThemeToggle = () => {
   const className = "theme-toggle";
-  return <button className={className}></button>
+  return <button className={className}>toggle</button>
 }    
 
 
