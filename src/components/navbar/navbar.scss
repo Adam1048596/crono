@@ -1,36 +1,57 @@
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
-  .logo {
-    img {
-      width: 10vw;
-      max-width: 100px;
-      min-width: 80px;
-      height: auto;
-    }
-  }
-  .nav {
+//navbar styles file
+.container{
+  position: sticky;
+  top: 0;
+  background: rgb(0 0 0 / 80%);
+  box-shadow: inset 0 -1px 0 0 rgb(255 255 255 / 10%);
+  .navbar {
+    @media (max-width: 500px) {   padding: 0 15px; }
     display: flex;
-    gap: 20px;
-    list-style: none;
-    li {
-      a {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        padding: 8px 12px;
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 0 100px;
+    // logo and nav are grouped on the left
+    .left-group{ display: flex; align-items: center; gap: 44px; }
 
-        &:hover,
-        &:focus {
-          background-color: #555;  // subtle hover effect
+    // logo styles
+    .logo { img { width: 24px; height: auto; } }
+
+    //navigation styles
+    .nav {
+      @media (max-width: 500px) { display: none; }
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      li {
+        a {
+          text-decoration: none;
+          font-family: 'Geist';
+          color: #888888;
+          font-weight: 400;
+          font-size: 14px;
+          transition: color .17s ease;
+          &:hover { color: #fff; }
         }
       }
     }
+
+    // switch light & dark mode component
+    .theme-toggle {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 5px 5px 5px 5px;
+      .iconLight,
+      .iconDark,
+      .iconAdd{
+        color: #888888;
+        &:hover { color: #fff; opacity: .8; }
+      }
+    }
   }
-  .theme-toggle{}
 }
