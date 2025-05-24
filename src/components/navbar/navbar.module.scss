@@ -13,7 +13,7 @@
     height: 64px;
     padding: 0 100px;
     // logo and nav are grouped on the left
-    .left-group{ display: flex; align-items: center; gap: 44px; }
+    .leftGroup{ display: flex; align-items: center; gap: 44px; }
 
     // logo styles
     .logo { img { width: 24px; height: auto; } }
@@ -38,7 +38,7 @@
     }
 
     // switch light & dark mode component
-    .theme-toggle {
+    .themeToggle {
       display: flex;
       gap: 8px;
       justify-content: center;

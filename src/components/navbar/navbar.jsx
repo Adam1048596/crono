@@ -1,22 +1,21 @@
-import './navbar.scss';
+// navbar component
+import styles from './navbar.module.scss';
 import cronoLogo from '../../assets/navbar-white-logo.png';
 
 // logo component
 const Logo = () => {
-  const className = "logo";
   return (
     <a
     href=""
-    className={className}>
+    className={styles.logo}>
     <img src={cronoLogo} alt="" />
     </a>
   );
 }
 // navigation component
 const Nav = () => {
-  const className = "nav";
   return (
-    <ul className={className}>
+    <ul className={styles.nav}>
       <li><a href="#">Studio</a></li>
       <li><a href="#">Showcase</a></li>
       <li><a href="#">Service</a></li>
@@ -27,10 +26,9 @@ const Nav = () => {
 }
 // switch light & dark mode component
 const ThemeToggle = () => {
-  const className = "theme-toggle";
   return(
-    <div className={className}>
-      <svg className="iconAdd"
+    <div className={styles.themeToggle}>
+      <svg className={styles.iconAdd}
       data-testid="geist-icon"
       height="16"
       width="16"
@@ -48,7 +46,7 @@ const ThemeToggle = () => {
       transform="translate(2.5, 2)"
       />
       </svg>
-      <svg className="iconLight"
+      <svg className={styles.iconLight}
       data-testid="geist-icon"
       height="16"
       width="16"
@@ -74,7 +72,7 @@ const ThemeToggle = () => {
       transform="translate(1.25, 1.25)"
       />
       </svg>
-      <svg className="iconDark"
+      <svg className={styles.iconDark}
       data-testid="geist-icon"
       height="16"
       width="16"
@@ -101,12 +99,10 @@ const ThemeToggle = () => {
 }    
 // navbar component
 const NavBar = () => {
-  const className = "navbar";
-  const sticky = "container";
   return (
-    <div className={sticky}>
-      <div className={className}>
-        <div className="left-group">
+    <div className={styles.container}>
+      <div className={styles.navbar}>
+        <div className={styles.leftGroup}>
           <Logo />
           <Nav />
         </div>
