@@ -4,14 +4,10 @@ import { createRoot } from 'react-dom/client'
 import './index.scss'
 // fonts
 import './fonts.scss'
-// Components
-import NavBar from './components/navbar/navbar.jsx'
-import Hero from './components/hero/hero.jsx'
-
+import App from './components/app.jsx'
 // Render the application
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <NavBar />
-    <Hero />
+    <App />
   </StrictMode>
-)
+);
