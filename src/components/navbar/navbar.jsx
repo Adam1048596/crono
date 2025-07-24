@@ -26,7 +26,7 @@ const Nav = () => {
 }
 // switch light & dark mode component
 const ThemeToggle = () => {
-  return(
+  return (
     <div className={styles.themeToggle}>
       <svg className={styles.iconAdd}
       data-testid="geist-icon"
