@@ -1,14 +1,12 @@
-// Components
-import NavBar from './navbar/navbar.jsx'
-import Hero from './hero/hero.jsx'
-import Service from './services/services.jsx';
+import { Routes, Route } from 'react-router-dom';
+import Homepage from './homepage.jsx'
 
 const App = () => {
   return (
     <>
-    <NavBar />
-    <Hero />
-    <Service />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+      </Routes>
     </>
   );
 }
