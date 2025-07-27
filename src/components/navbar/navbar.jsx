@@ -6,7 +6,7 @@ import cronoLogo from '../../assets/navbar-white-logo.png';
 const Logo = () => {
   return (
     <a
-    href=""
+    href="/"
     className={styles.logo}>
     <img src={cronoLogo} alt="" />
     </a>
