@@ -1,0 +1,172 @@
+.footer {
+  // background: #111;
+  color: #fff;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  h1 {
+    font-family: "Geist";
+    font-weight: 600;
+    font-size: 100px;
+    margin-bottom: 15px;
+    background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    span {
+      display: block;
+      font-size: 100px;
+      font-weight: 700;
+
+      em {
+        font-family: 'Georgia', serif;
+        font-style: italic;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .inputGroup {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+
+      input {
+        padding: 12px 20px;
+        border: none;
+        border-bottom: 1px solid #999;
+        background: transparent;
+        color: #fff;
+        font-size: 16px;
+        width: 220px;
+
+        &:focus {
+          outline: none;
+          border-color: #fff;
+        }
+      }
+
+      button {
+        padding: 10px 20px;
+        background: #fff;
+        color: #000;
+        border: none;
+        border-radius: 999px;
+        font-size: 14px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        &:hover {
+          background: #ddd;
+        }
+      }
+    }
+  }
+
+  .middleRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #333;
+    padding-top: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .socialIcons {
+      display: flex;
+      gap: 16px;
+
+      svg {
+        font-size: 18px;
+        background: #1a1a1a;
+        border-radius: 50%;
+        padding: 8px;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+          background: #444;
+        }
+      }
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        font-size: 14px;
+        color: #aaa;
+        cursor: default;
+      }
+    }
+  }
+
+  .bottomRow {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #333;
+    padding-top: 30px;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    div {
+      flex: 1;
+      min-width: 200px;
+
+      h4 {
+        margin: 0 0 8px;
+        font-size: 14px;
+        color: #999;
+        font-weight: 500;
+      }
+
+      p {
+        margin: 0;
+        font-size: 14px;
+        color: #eee;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .footerEnd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+
+    span {
+      font-family: "Geist";
+      font-size: 100px;
+      font-weight: 600;
+    }
+
+    .arrow {
+      font-size: 28px;
+    }
+  }
+}

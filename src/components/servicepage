@@ -1,0 +1,87 @@
+import img1 from "../assets/1.png";
+import img2 from "../assets/2.png";
+import img3 from "../assets/3.png";
+import img4 from "../assets/4.png";
+import img5 from "../assets/5.png";
+import img6 from "../assets/6.png";
+import img7 from "../assets/7.png";    
+
+
+      const principles = [
+  {
+    img: img1,
+    title: "Build Trust",
+    description:
+      "Create confidence by ensuring that users’ experience with data and analysis is always Secure, Transparent, Accurate, Relevant and Consistent (STARC).",
+    bullets: ["Secure", "Transparent", "Accurate", "Relevant", "Consistent"],
+  },
+  {
+    img: img2,
+    title: "Ensure Availability",
+    description:
+      "Design systems that are stable, available as much as possible, degrade gracefully and recover quickly. ThoughtSpot is mission critical for its customers, design, build and maintain it accordingly.",
+    bullets: ["Degrade gracefully", "Recover quickly"],
+  },
+  {
+    img: img3,
+    title: "Make It Quick",
+    description:
+      "Build and deliver the app for a snappy user and customer experience. Create efficient UI/UX patterns that make using and upgrading ThoughtSpot fast and easy.",
+    bullets: ["Enable speed", "Create efficiency", "Optimize for common cases"],
+  },
+  {
+    img: img4,
+    title: "Stay Approachable",
+    description:
+      "Make the user experience feel familiar, inviting and understandable, yet technically advanced. Keep interactions and workflows simple.",
+    bullets: ["Keep it familiar", "Reassure users", "Make it accessible"],
+  },
+  {
+    img: img5,
+    title: "Create Delight",
+    description:
+      "Make ThoughtSpot distinctively engaging and pleasurable, through visually appealing graphics, data visualizations, animations, micro-interactions, and clever copy. Think of UI and UX quality as non-negotiable. Build in pleasant surprises at every opportunity.",
+    bullets: [
+      "Build beauty that works",
+      "Make meaning with motion",
+      "Use clear & friendly language",
+    ],
+  },
+  {
+    img: img6,
+    title: "Be Proactive",
+    description:
+      "Design intelligent systems that learn from user activity, leverage existing context, and infer intent. Then, use these learnings to provide insights, simplify existing tasks, and suggest new ones.",
+    bullets: ["Create automation", "Empower users", "Reduce effort"],
+  },
+  {
+    img: img7,
+    title: "Simplify",
+    description:
+      "Eliminate the obvious, keep the essential. Progressively disclose information, functionality and controls. Cut down on clicks, steps, data to input, and new concepts to learn.",
+    bullets: [
+      "Create less input more output",
+      "Make it simple to learn",
+      "Make it easy to consume",
+    ],
+  },
+  ];
+    
+    
+    <section className={styles.productPrinciples}>
+      <h2>Product Principles</h2>
+      <div className={styles.grid}>
+        {principles.map((p, index) => (
+          <div key={index} className={styles.card}>
+            <img src={p.img} alt={`Principle ${index + 1}`} className={styles.number} />
+            <h3>{p.title}</h3>
+            <p>{p.description}</p>
+            <ul>
+              {p.bullets.map((b, i) => (
+                <li key={i}>{b}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>

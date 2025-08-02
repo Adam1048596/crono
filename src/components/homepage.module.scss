@@ -40,7 +40,7 @@
 .service {
   background-color: #262629;
   border-radius: 20px;
-  padding: 40px;
+  padding: 40px 49px 40px 49px;
   width: 280px;
   display: flex;
   flex-direction: column;
@@ -74,5 +74,396 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 1.5;
+  }
+}
+
+
+// about section styles
+.statsSection {
+  display: flex;
+  gap: 60px;
+  padding: 80px;
+  border-radius: 20px;
+  font-family: 'Helvetica Neue', sans-serif;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    padding: 40px;
+  }
+
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+
+    .location {
+          font-family: "Geist";
+          color: #888888;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 1.5;
+
+      strong {
+        color: #fff;
+        font-weight: 400;
+      }
+    }
+
+    .aboutButton {
+      padding: 10px 20px;
+      margin-top: 400px;
+      border: 1px solid #ccc;
+      background: white;
+      border-radius: 999px;
+      font-size: 14px;
+      cursor: pointer;
+      align-self: start;
+      transition: all 0.3s ease;
+
+      span {
+        margin-left: 5px;
+      }
+
+      &:hover {
+        background: #eee;
+      }
+    }
+  }
+
+  .right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    h2 {
+    font-family: "Geist";
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 15px;
+    background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+    .cards {
+      display: flex;
+
+      .card {
+        margin-right: 150px;
+        .value {
+          font-family: "Geist";
+          font-weight: 600;
+          font-size: 110px;
+          background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.5));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .description {
+          font-family: "Geist";
+          color: #888888;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 1.5;
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+
+
+
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+
+  h1 {
+    max-width: 1011px;
+    font-family: "Geist";
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 15px;
+    background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .aboutContent {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: auto;
+    width: fit-content;
+    padding: 1rem;
+
+    p {
+      font-family: "Geist";
+      color: #666;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 130px;
+    flex-wrap: wrap;
+    margin-top: 80px;
+
+    .statItem {
+      text-align: center;
+      display: inline-grid
+;
+
+      .statNumber {
+        font-family: "Geist";
+        font-weight: 600;
+        font-size: 110px;
+        background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.5));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .statLabel {
+        font-family: "Geist";
+        color: #666;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+
+
+
+
+.productPrinciples {
+  background-color: #000;
+  color: #fff;
+  padding: 100px 40px;
+  font-family: 'Helvetica Neue', sans-serif;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 4 equal columns
+    gap: 60px;
+  }
+
+  .headerColumn {
+    grid-column: 1 / 2; // First column for h2 and 01
+
+    h2 {
+      font-family: "Geist";
+      font-weight: 600;
+      font-size: 80px;
+      margin-bottom: 300px;
+      background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.5));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+    }
+
+    .card {
+      margin-top: 20px; // Space between h2 and card
+    }
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; // Space between cards in the same column
+  }
+
+  .card {
+    background: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+
+    // Numbered circle
+    &::before {
+      content: attr(data-number);
+      position: absolute;
+      top: -40px;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      background: #fff;
+      color: #000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+
+      li {
+        position: relative;
+        padding-left: 18px;
+        margin: 6px 0;
+        font-size: 15px;
+        color: #aaa;
+
+        &::before {
+          content: "•";
+          position: absolute;
+          left: 0;
+          color: #00ffd0;
+        }
+      }
+    }
+
+    // Custom shapes based on the image
+    &[data-number="01"]::after { // Build Trust (triangle)
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #00ffd0 0%, #007bff 100%);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    &[data-number="02"]::after { // Ensure Availability (circle)
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #ff00ff 0%, #ff1493 100%);
+      border-radius: 50%;
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    &[data-number="03"]::after { // Make It Quick (diamond)
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #00ff00 0%, #adff2f 100%);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    &[data-number="04"]::after { // Stay Approachable (heart)
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #ff4500 0%, #ff8c00 100%);
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    &[data-number="05"]::after { // Create Delight (circle)
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1e90ff 0%, #00b7eb 100%);
+      border-radius: 50%;
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    &[data-number="06"]::after { // Be Proactive (diamond)
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    &[data-number="07"]::after { // Simplify (circle)
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+      border-radius: 50%;
+      opacity: 0.2;
+      z-index: -1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+
+    .grid {
+      grid-template-columns: 1fr; // Stack columns on mobile
+    }
+
+    .headerColumn h2 {
+      font-size: 36px;
+    }
+
+    .column {
+      gap: 20px;
+    }
   }
 }
