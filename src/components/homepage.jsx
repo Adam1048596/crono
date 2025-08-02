@@ -3,59 +3,59 @@ import Footer from './footer.jsx';
 import styles from './homepage.module.scss';
 import video1 from '../assets/videos/1.mp4';
 import video2 from '../assets/videos/2.mp4';
-import video3 from '../assets/videos/3.mp4';
+import video3 from '../assets/videos/3.mp4'; 
 
 
 const ProductPrinciples = () => {
-  const principles = [
+const principles = [
     {
       number: '01',
       title: 'Build Trust',
       description: 'Create confidence by ensuring that users\' experience with data and analysis is always Secure, Transparent, Accurate, Relevant, and Consistent (STARC).',
-      bullets: ['SECURE', 'TRANSPARENT', 'ACCURATE', 'RELEVANT', 'CONSISTENT'],
+      bullets: ['Secure', 'Transparent', 'Accurate', 'Relevent', 'Consistent']
     },
     {
       number: '02',
       title: 'Ensure Availability',
       description: 'Design systems that are stable, available as much as possible, degrade gracefully, and recover quickly. ThoughtSpot is mission critical for its customers; design, build, and maintain it accordingly.',
-      bullets: ['DEGRADE GRACEFULLY', 'RECOVER QUICKLY'],
+      bullets: ['Degrade gracefully', 'Recover quickly']
     },
     {
       number: '03',
       title: 'Make It Quick',
-      description: '',
-      bullets: ['ENABLE SPEED', 'CREATE EFFICIENCY', 'OPTIMIZE FOR COMMON CASES'],
+      description: 'Optimize systems to deliver fast and efficient results, enhancing user productivity with minimal delay.',
+      bullets: ['Enable speed', 'Create efficiency', 'Optimize for common cases']
     },
     {
       number: '04',
       title: 'Stay Approachable',
       description: 'Make the user experience feel familiar, inviting, and understandable, yet technically advanced. Keep interactions and workflows simple.',
-      bullets: ['KEEP IT FAMILIAR', 'REASSURE USERS', 'MAKE IT ACCESSIBLE'],
+      bullets: ['Keep it familiar', 'Reassure users', 'Make it accessible']
     },
     {
       number: '05',
       title: 'Create Delight',
       description: 'Make ThoughtSpot distinctively engaging and pleasurable, through visually appealing graphics, data visualizations, animations, micro-interactions, and clever copy. Think of UI and UX quality as non-negotiable.',
-      bullets: ['BUILD BEAUTY THAT WORKS', 'MAKE MEANING WITH MOTION', 'USE CLEAR & FRIENDLY LANGUAGE'],
+      bullets: ['Build beauty that works', 'Make meaning with motion', 'Use clear & friendly language']
     },
     {
       number: '06',
       title: 'Be Proactive',
       description: 'Design intelligent systems that learn from user activity, leverage existing context, and infer intent. Then, use these learnings to produce insights, simplify existing tasks, and suggest new ones.',
-      bullets: ['CREATE AUTOMATION', 'EMPOWER USERS', 'REDUCE EFFORT'],
+      bullets: ['Create automation', 'Empower users', 'Reduce effort']
     },
     {
       number: '07',
       title: 'Simplify',
       description: 'Eliminate the obvious, keep the essential. Progressively disclose information, functionality, and controls. Cut down on clicks, steps, data to input, and new concepts to learn.',
-      bullets: ['CREATE LESS INPUT MORE OUTPUT', 'MAKE IT SIMPLE TO LEARN', 'MAKE IT EASY TO CONSUME'],
+      bullets: ['Create less input more output', 'Make it simple to learn', 'Make it easy to consume']
     },
   ];
 
   return (
     <section className={styles.productPrinciples}>
       <div className={styles.grid}>
-        <div className={styles.headerColumn}>
+        <div className={`${styles.headerColumn} ${styles.column1}`}>
           <h2>Product Principles</h2>
           <div className={styles.card} data-number={principles[0].number}>
             <h3>{principles[0].title}</h3>
@@ -69,7 +69,7 @@ const ProductPrinciples = () => {
             )}
           </div>
         </div>
-        <div className={styles.column}>
+        <div className={`${styles.column} ${styles.column2}`}>
           <div className={styles.card} data-number={principles[1].number}>
             <h3>{principles[1].title}</h3>
             {principles[1].description && <p>{principles[1].description}</p>}
@@ -93,7 +93,7 @@ const ProductPrinciples = () => {
             )}
           </div>
         </div>
-        <div className={styles.column}>
+        <div className={`${styles.column} ${styles.column3}`}>
           <div className={styles.card} data-number={principles[2].number}>
             <h3>{principles[2].title}</h3>
             {principles[2].description && <p>{principles[2].description}</p>}
@@ -117,7 +117,7 @@ const ProductPrinciples = () => {
             )}
           </div>
         </div>
-        <div className={styles.column}>
+        <div className={`${styles.column} ${styles.column4}`}>
           <div className={styles.card} data-number={principles[3].number}>
             <h3>{principles[3].title}</h3>
             {principles[3].description && <p>{principles[3].description}</p>}
@@ -207,9 +207,7 @@ const stats = [
         <p className={styles.location}>
           Digital Agency based in<br></br><strong>casablanca, MA</strong>
         </p>
-        <button className={styles.aboutButton}>
-          About Us <span>→</span>
-        </button>
+        <a href='#'>Know More About Us</a>
       </div>
 
       <div className={styles.right}>
@@ -236,7 +234,7 @@ const stats = [
               fast-changing world. From responsive websites to full-stack web applications, we combine clean code with modern design to deliver
               custom solutions tailored to your goals. Whether you're a startup or a growing company, we build scalable, secure, and user-friendly
               platforms that leave a lasting impression and deliver real results.</p>
-            <button>Schedule a Call</button>
+            <a href='#'>Schedule a Call</a>
           </div>
           <div className={styles.stats}>
             <div className={styles.statItem}>
